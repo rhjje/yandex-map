@@ -1,0 +1,38 @@
+.Tabs {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    z-index: 1;
+    background: #FFFFFF;
+    border-radius: 8px;
+}
+
+.TabsList {
+    display: flex;
+    padding: 8px;
+}
+
+.Tab {
+    width: 124px;
+    height: 40px;
+    list-style: none;
+
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: 0em;
+    text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.TabActive {
+    color: #FFFFFF;
+    background: #72BF44;
+}
+
+.TabPanel {
+    display: none;
+}
