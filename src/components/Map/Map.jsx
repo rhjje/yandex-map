@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { YMaps, Map, Placemark, SearchControl } from "react-yandex-maps";
-import { MapTabs } from "./components/MapTabs";
+import { MapTabs } from "./components/MapTabs/MapTabs";
 import { ATMs, offices } from "./utils/templates";
 import { mapPopup } from "./utils/mapPopup";
 import marker from "./marker.svg";
@@ -30,6 +30,7 @@ export const YandexMap = () => {
               noPlacemark: true,
               placeholderContent: "Поиск по адресу",
               float: "right",
+              position: { top: 24, right: 40 },
             }}
           />
           {markers.map((mark, i) => (

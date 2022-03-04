@@ -1,14 +1,17 @@
-[class*="-ground-pane"] {
-    filter: grayscale(1);
+@mixin DesktopL {
+    font-family: GT America LCG;
+    font-size: 18px !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    line-height: 24px !important;
 }
 
-[class*="map-copyrights-promo"] {
-    display: none;
-}
-
-[class*="-balloon__layout"],
-[class*="-balloon"] {
-    border-radius: 8px;
+@mixin DesktopS {
+    font-family: GT America LCG;
+    font-size: 14px !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    line-height: 16px !important;
 }
 
 .SubtitlePopup {
@@ -19,8 +22,8 @@
 }
 
 .RowPopup {
-   padding: 16px 0;
-   border-bottom: 2px #F6F6F6 solid;
+    padding: 16px 0;
+    border-bottom: 2px #F6F6F6 solid;
 }
 
 .RowPopup:last-child {
@@ -39,6 +42,145 @@
     margin-bottom: 4px;
 }
 
-.DescriptionPopup {
-    
+.DescriptionPopup {}
+
+[class*="-ground-pane"] {
+    filter: grayscale(1);
+}
+
+[class*="map-copyrights-promo"] {
+    display: none;
+}
+
+[class*="-balloon__layout"],
+[class*="-balloon"] {
+    border-radius: 8px;
+}
+
+[class*="-searchbox__normal-layout"] {
+    width: 530px !important;
+
+    &::after {
+        border-radius: 4px !important;
+    }
+}
+
+[class*="-searchbox__input-cell"] {
+    width: 424px !important;
+}
+
+[class*="_focused"] {
+    box-shadow: inset 0 0 0 2px #E8EAED !important;
+}
+
+[class*="-searchbox-input"] {
+    width: 424px;
+    border-radius: 4px 0 0 4px !important;
+}
+
+[class*="-searchbox-input__input"] {
+    font-family: GT America LCG;
+    font-size: 18px !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    letter-spacing: 0em !important;
+    height: 48px !important;
+    width: 400px !important;
+    border-radius: 8px;
+    border-left-width: 0 !important;
+    padding-left: 24px !important;
+}
+
+[class*="-searchbox__button-cell"] {
+    width: 106px;
+}
+
+[class*="-searchbox-button"] {
+    height: 48px !important;
+    border: none !important;
+    background-color: #72BF44 !important;
+}
+
+[class*="-searchbox-button-text"] {
+    font-family: GT America LCG;
+    font-size: 14px !important;
+    font-style: normal !important;
+    font-weight: 500 !important;
+    line-height: 48px !important;
+    color: #FFFFFF;
+}
+
+[class*="-search__suggest"][class*="-popup"] {
+    padding-left: 0 !important;
+    width: 418px !important;
+    border-radius: 4px;
+    border: 2px solid #E8EAED;
+}
+
+[class*="-search__suggest-item"] {
+    width: 372px !important;
+    padding: 16px 24px !important;
+    font-family: GT America LCG;
+    font-size: 18px !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    line-height: 24px !important;
+    text-align: left;
+}
+
+[class*="-search__suggest-item_selected_yes"] {
+    background-color: #F6F6F6 !important;
+}
+
+[class*="-islets_serp"] {
+    border-radius: 4px !important;
+}
+
+[class*="-islets_serp-item__title"] {
+    @include DesktopL;
+    color: #242624 !important;
+    margin-bottom: 4px !important;
+}
+
+[class*="-islets_card__description"] {
+    @include DesktopS;
+    color: #ACACAC !important;
+    margin-bottom: 4px !important;
+}
+
+[class*="ymaps-2-1-79-balloon__content"] {
+    margin-right: 12px !important;
+}
+
+
+@media (max-width: 992px) {
+    [class*="-searchbox__normal-layout"] {
+        width: 328px !important;
+    }
+
+    [class*="-searchbox__input-cell"] {
+        width: 232px !important;
+    }
+
+    [class*="-searchbox-input"] {
+        width: 232px;
+    }
+
+    [class*="-searchbox-input__input"] {
+        width: 208px !important;
+    }
+
+    [class*="-search__suggest"][class*="-popup"] {
+        width: 226px !important;
+    }
+
+    [class*="-search__suggest-item"] {
+        width: 180px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    [class*="-controls__control"] {
+        inset: 16px 16px auto auto !important;
+    }
 }
