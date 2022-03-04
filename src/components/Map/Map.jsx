@@ -17,9 +17,9 @@ export const YandexMap = () => {
   }
 
   return (
-    <YMaps query={{ apikey: "54c1b06d-f63e-4351-a274-661b72e1165a" }}>
-      <div className={styles.Map}>
-        <MapTabs selectTab={setSelectedTabs}></MapTabs>
+    <div className={styles.Map}>
+      <YMaps query={{ apikey: "54c1b06d-f63e-4351-a274-661b72e1165a" }}>
+        <MapTabs selectTab={setSelectedTabs} />
         <Map
           width="100%"
           height="100%"
@@ -36,7 +36,7 @@ export const YandexMap = () => {
           {markers.map((mark, i) => (
             <Placemark
               geometry={[mark.coordinates.lat, mark.coordinates.lng]}
-              modules={["geoObject.addon.balloon", "geoObject.addon.hint"]}
+              modules={["geoObject.addon.balloon"]}
               options={{
                 iconLayout: "default#image",
                 iconImageHref: marker,
@@ -50,7 +50,7 @@ export const YandexMap = () => {
             />
           ))}
         </Map>
-      </div>
-    </YMaps>
+      </YMaps>
+    </div>
   );
 };

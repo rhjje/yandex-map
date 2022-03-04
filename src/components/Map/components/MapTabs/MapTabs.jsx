@@ -1,5 +1,4 @@
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
-
 import styles from "./MapTabs.module.scss";
 
 export const MapTabs = ({ selectTab }) => (

@@ -5,7 +5,9 @@ import "./App.css";
 
 ReactDOM.render(
   <React.StrictMode>
-    <YandexMap />
+    <div style={{ width: "100%", height: "100vh" }}>
+      <YandexMap />
+    </div>
   </React.StrictMode>,
   document.getElementById("root")
 );
